@@ -11,7 +11,10 @@
 #include <cstring>
 
 namespace fs = std::filesystem;
-
+std::string username = "github_runner";
+if (argc > 1) {
+    username = argv[1];
+}
 std::string generate_json(const std::string& username, double gen_time, double sort_time, bool sorted) {
     std::stringstream json;
     json << std::fixed << std::setprecision(4); 
